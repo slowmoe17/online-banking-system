@@ -8,9 +8,8 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
 from .models import Transaction, BankAccount
-from .serializers import BankAccountSerializer, TransactionSerializer
+from .serializers import  TransactionSerializer
 
-# class that handles the transfer of money between two accounts 
 class Transfer(APIView):
     permission_classes = (permissions.AllowAny,)
     def post(self, request):
